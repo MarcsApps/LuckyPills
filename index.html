@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Pet Meds</title>
+
+
+    
+
+        <link rel="stylesheet" href="css/style.css">
+
+
+
+
+
+  </head>
+
+  <body>
+
+    <div id="page-wrapper">
+  <h1>Lucky Medication</h1>
+
+  <label for="default">Choose the Medication Given</label>
+  <input type="text" id="default" list="pills" placeholder="e.g. Tramadol">
+    <datalist id="pills">
+    <option value="Gabapentin 300mg">
+    <option value="Tramadol 50mg">
+    <option value="Rimadyl 75mg">
+    <option value="Anal Cream">
+    <option value="Anal Wipes">
+  </datalist>
+
+
+  <!-- sample select (another source) -->
+  <select id="first-choice">
+  <option selected value="base">Please Select</option>
+  <option value="beverages">Beverages</option>
+  <option value="snacks">Snacks</option>
+</select>
+
+<br>
+
+<select id="second-choice">
+  <option>Please choose from above</option>
+</select>
+
+
+  <label for="ajax">Pick an HTML Element (options loaded using AJAX)</label>
+  <input type="text" id="ajax" list="json-datalist" placeholder="e.g. datalist">
+  <datalist id="json-datalist"></datalist>
+
+
+</div>
+
+        <script src="js/index.js"></script>
+
+
+
+  </body>
+</html>
