@@ -37,11 +37,9 @@ request.onreadystatechange = function(response) {
       x=x+1;
          
       resultj=(htmlj?htmlj:"") + '<tr> <td>' + j["Pill"] + '</td><td>' + j["Date"]+'</td></tr>' 
-       document.getElementById('logtb').appendChild= [resultj];
+       document.getElementById('logTb').appendChild= [resultj];
 
-    var selectList = document.createElement("tr");
-     selectList.createElement.innerHTML('tr')= htmlj;
-     parentElmt.appendChild(selectList);
+   
       });
      //document.getElementById('tlog').appendChild= [resultj];
       }
