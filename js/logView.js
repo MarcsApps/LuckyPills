@@ -1,5 +1,4 @@
 
-
 // /////////////////////////////////////////////
 //  Add Time
 ///////////////////////////////////////////////
@@ -24,61 +23,41 @@ request.onreadystatechange = function(response) {
   if (request.readyState === 4) {
     if (request.status === 200) {
       // Parse the JSON
-        var y=[];
-        var x = request.responseText;
-       y= x.replace(/{/g,"");
-        y=y.replace(/}/g,"");
-         y=y.replace(/"/g,"");
-         y=y.replace(/Pill/g,"<br>Pill");
-        var z =[]
-        z=y.split("<br>");
-          document.getElementById('logUL').innerHTML=z[2];
-          // document.getElementById('logUL').innerHTML=x;
-
-
-
-
-      // var jsonOptions = JSON.parse(request.responseText);
-
+  //      document.getElementById('logUL').innerHTML=request.responseText
+      var jsonOptions = JSON.parse(request.responseText);
+      var z = jsonOptions[0]
+   //         document.getElementById('logUL').innerHTML=z['Date'];
       // marc create new select
-      // var selectList = document.createElement("li");
-      //selectList.setAttribute("id", "ulLog");
-      // parentElmt.appendChild(selectList);
+      var x = 0;
+      var tdj=[];
+      var htmlj;
+      var resultj;
       // Loop over the JSON array.
-       var dataLog 
-       //console.log(item);
-      // jsonOptions.forEach(function(item) {
-        z=z.splice(1,z.length)
-          var arrayLength = z.length;
-          for (var i =0; i < arrayLength; i++) {
-               
-    //Do something
+      jsonOptions.forEach(function(j) {
+      x=x+1;
+         
+      resultj=(htmlj?htmlj:"") + '<tr> <td>' + j["Pill"] + '</td><td>' + j["Date"]+'</td></tr>' 
+       document.getElementById('logtb').appendChild= [resultj];
 
-        // Create a new <option> element. Set value & text to Item
-        // var option = document.createElement('li');
-
-        // option.setAttribute("text", item);
-        // option.text = item;
-        // selectList.appendChild(option);  // Add the <option> element to the <parentElmt>.
-       
-          dataLog = (dataLog? dataLog : "" )+ "<td> " + z[i] + "</tdS> <br>";
-          
-}
-          dataLog=dataLog.replace(/,/g,"    ")
-          document.getElementById('logUL').innerHTML=dataLog;
-               };
+    var selectList = document.createElement("tr");
+     selectList.createElement.innerHTML('tr')= htmlj;
+     parentElmt.appendChild(selectList);
+      });
+     //document.getElementById('tlog').appendChild= [resultj];
       }
 
      // An error occured :(
      else {
-      document.getElementById('logUL').innerHTML=('Error Loading LOG: ' + x);
-      // // Create a new <option> element. Set value & text to Item
+     var selectList = document.createElement("p");
+     selectList.createElement.innerHTML('p')= "error loading Log!";
+     parentElmt.appendChild(selectList);
+       // Create a new <option> element. Set value & text to Item
       //  var option = document.createElement('p');
       //  option.setAttribute("value", "Error");
       //  option.text = "Couldn't Load Log List!";
       //  selectList.appendChild(option);  //
        }
-};
+}};
 //
 // Set up and make the request.
 request.open('GET','http://marcsapps.com/log.json', true);
