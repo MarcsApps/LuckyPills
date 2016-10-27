@@ -112,3 +112,6 @@ function postLog(){
 // button on click post log
 /////////////////////////////
 document.getElementById('logPill').onclick = postLog;
+
+
+///////////////////////
