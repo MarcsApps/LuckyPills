@@ -9,11 +9,21 @@
   <body>
 <div id="page-wrapper">  <!-- div for css -->
   <h1>Lucky Medication</h1>  <!-- title -->
-  <br>
+ 
+  <h3 id="timeP">Time: <br>
+     <br>  <script>
+    var a = new Date().toString().split("G")[0];
+    document.getElementById("timeP").innerHTML = "Time: " + a
+    </script>
+  </h3>
+
+
   <!-- This div will be filled from javascript -->
   <div id="PillList">Choose Medication To Give
-
   </div>
+
+
+
 
   <script src="js/index.js"></script>
   </body>
