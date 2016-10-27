@@ -70,11 +70,27 @@ button {
   margin: 0;
   width: 100%;
   text-align: center;
+  align-self: center;
 }
 
 button:hover, button:focus {
   opacity: 0.75;
   cursor: pointer;
+}
+
+.buttonD {
+  text-align: center;
+}
+
+#logPill {
+  font-size: 18px;
+float: none;
+}
+
+#title {
+  text-align: center;
+
+
 }
 
 button:active {
