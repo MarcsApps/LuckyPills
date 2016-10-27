@@ -38,7 +38,24 @@ input {
   border-radius: 3px;
   border: 1px solid #D9D9D9;
 }
+select {
 
+
+      display: inline-block;
+      border-radius: 3px;
+      border: none;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.8em;
+      background: #69c773;
+      border-bottom: 1px solid #498b50;
+      color: black;
+      -webkit-font-smoothing: antialiased;
+      font-weight: bold;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+}
 button {
   display: inline-block;
   border-radius: 3px;
