@@ -22,6 +22,9 @@ request.onreadystatechange = function(response) {
    
         
       var rr = decodeURIComponent(request.response);
+      rr=rr.slice(0, -3);
+      rr=rr.substr(1);
+      rr= "[" + rr + "]";
       var jrr = jQuery.parseJSON( rr );
 
        
