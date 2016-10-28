@@ -1,4 +1,21 @@
 window.onload=function(){
+
+
+////////////////////////////////////////////////////////////////
+////     Date Transform
+////////////////////////////////////////////////////////////////
+
+
+function fixtime(time){
+var date = new Date
+date=time
+var y=date.getFullYear;
+var m=date.getMonth+1;
+var t=date.getDate();
+var newt= m +" "+t+" "+y;
+return newt;
+
+}
 // /////////////////////////////////////////////
 //  Add Time
 ///////////////////////////////////////////////
@@ -36,9 +53,17 @@ request.onreadystatechange = function(response) {
       //var jsonOptions = JSON.parse(decodedReq);
       // Loop over the JSON array.  // JQUERY   
 $.each(jrr, function (index, item) {
+var d = new Date;
+d=(item["Date"]);
+var e = Date(d);var f=""
+f=e
+var g= ""
+g=f.split(0.-33)
+
+
     var eachrow = "<tr>"
                  + "<td>" + item["Pill"] + "</td>"
-                 + "<td>" + item["Date"] + "</td>"
+                 + "<td>" + g + "</td>"
                  + "</tr>";
           $('#LogTb').append(eachrow);
  //  (fixDate(item["Date"]));   
@@ -53,14 +78,4 @@ $.each(jrr, function (index, item) {
 request.open('GET','http://marcsapps.com/log.json', true);
 request.send();
 
-// /////////////////////////
-// function fixDate(d){
-// console.log(d);
-// var date=(new Date("1477555582614"));
-// alert(date.getHours);
-// //  alert(dd);
-// }
-
-
-
-}
+ }; // for window ready
