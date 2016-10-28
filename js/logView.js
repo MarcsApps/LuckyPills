@@ -57,8 +57,8 @@ var d = new Date;
 d=(item["Date"]);
 var e = Date(d);
 var date = new Date(d);
-    var f = date.toUTCString().split(' '); 
-var e= f[0]+" "+f[2]+" "+f[1]+" "+f[3]+" "+f[4]+" "+f[1]+" "+;
+    var f = date.toLocaleString().split(' '); 
+var e= f[0]+" "+f[1]+" "+f[2]; //+" "+f[3]+" "+f[4]+" "+f[1]+" ";
     var eachrow = "<tr>"
                  + "<td>" + item["Pill"] + "</td>"
                  + "<td>" + e + "</td>"
