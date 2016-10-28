@@ -19,10 +19,20 @@ request.onreadystatechange = function(response) {
   if (request.readyState === 4) {
     if (request.status === 200) {
       // Parse the JSON
-  //      document.getElementById('logUL').innerHTML=request.responseText
-      var jsonOptions = JSON.parse(request.responseText);
+   
+        
+      var rr = decodeURIComponent(request.response);
+      var jrr = jQuery.parseJSON( rr );
+
+       
+
+
+
+
+
+      //var jsonOptions = JSON.parse(decodedReq);
       // Loop over the JSON array.  // JQUERY   
-$.each(jsonOptions, function (index, item) {
+$.each(jrr, function (index, item) {
     var eachrow = "<tr>"
                  + "<td>" + item["Pill"] + "</td>"
                  + "<td>" + item["Date"] + "</td>"
