@@ -27,9 +27,9 @@ request.onreadystatechange = function(response) {
                  + "<td>" + item["Pill"] + "</td>"
                  + "<td>" + item["Date"] + "</td>"
                  + "</tr>";
-          $('#LogTb').append.innerHTML(eachrow);
+          $('#LogTb').append(eachrow);
             //  console.log(fixDate((item["Date"])));
-     $('#test'').innerHTML("test") ;
+     //$('#test').innerHTML("test") ;
 });
       };
      //document.getElementById('tlog').appendChild= [resultj];
