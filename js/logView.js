@@ -1,4 +1,4 @@
-
+window.onload=function(){
 // /////////////////////////////////////////////
 //  Add Time
 ///////////////////////////////////////////////
@@ -22,35 +22,32 @@ request.onreadystatechange = function(response) {
   //      document.getElementById('logUL').innerHTML=request.responseText
       var jsonOptions = JSON.parse(request.responseText);
       // Loop over the JSON array.  // JQUERY   
- $.each(jsonOptions, function (index, item) {
+$.each(jsonOptions, function (index, item) {
     var eachrow = "<tr>"
                  + "<td>" + item["Pill"] + "</td>"
                  + "<td>" + item["Date"] + "</td>"
                  + "</tr>";
           $('#LogTb').append(eachrow);
-            //  console.log(fixDate((item["Date"])));
-     //$('#test').innerHTML("test") ;
-});
-      };
-     //document.getElementById('tlog').appendChild= [resultj];
-      }
+ //  (fixDate(item["Date"]));   
+}
+);};}
 
      // An error occured :(
-     else {
-    $('logTb').append('Error loading Table'); 
-    
-       }
+     else {$('logTb').append('Error loading Table');
+     }
 };
 // Set up and make the request.
 request.open('GET','http://marcsapps.com/log.json', true);
 request.send();
 
-///////////////////////////
+// /////////////////////////
 // function fixDate(d){
-// var dd = new date(d);
-
-
-
-// console.log(dd);
-// return dd;
+// console.log(d);
+// var date=(new Date("1477555582614"));
+// alert(date.getHours);
+// //  alert(dd);
 // }
+
+
+
+}
