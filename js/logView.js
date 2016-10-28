@@ -1,21 +1,5 @@
 window.onload=function(){
-
-
-////////////////////////////////////////////////////////////////
-////     Date Transform
-////////////////////////////////////////////////////////////////
-
-
-function fixtime(time){
-var date = new Date
-date=time
-var y=date.getFullYear;
-var m=date.getMonth+1;
-var t=date.getDate();
-var newt= m +" "+t+" "+y;
-return newt;
-
-}
+ 
 // /////////////////////////////////////////////
 //  Add Time
 ///////////////////////////////////////////////
@@ -43,12 +27,6 @@ request.onreadystatechange = function(response) {
       rr=rr.substr(1);
       rr= "[" + rr + "]";
       var jrr = jQuery.parseJSON( rr );
-
-       
-
-
-
-
 
       //var jsonOptions = JSON.parse(decodedReq);
       // Loop over the JSON array.  // JQUERY   

@@ -9,18 +9,30 @@
   <body>
 <div id="page-wrapper">  <!-- div for css -->
   <h1 id="title">Lucky's Medication</h1>  <!-- title -->
-
-<!--   JS ADDS TIME HERE -->
+  <!--   JS ADDS TIME HERE -->
   <h3 id="timeP">Time: <br>  </h3>
   <!-- This div will be filled from javascript -->
   <div id="TakenToday">These are the meds Lucky has been given Today:
-  </div> <br>
+  </div> 
+   <div id='logDiv'>
+<table id='tlog' class="rwd-table">
+  <tbody id='LogTb'>
+ <tr>
+  <th>Pill</th>
+  <th>Date</th>
+ </tr>
+ </tbody> 
+   
+ 
+ </table>
+ </div>
 <!-- Submit form button -->
 <a href="log.html">Click to Log Pills.</a>
 <a href="logView.html">Click to view history of pills given.</a>
 </div>
-<!--    -->
-  </body>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- // <script src="jquery-3.1.1.min.js"></script>
+<!--  <script src="jquery-3.1.1.min.js"></script>  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+ 
 </html>
